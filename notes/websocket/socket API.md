@@ -50,7 +50,8 @@ int socket(int domain, int type, int protocol);
 - ***protocol***: specifies the protocol layer. Mostly 0 is used to specifies the IP layer.
 
 
-socket()  creates  an endpoint for communication and returns a file descriptor that refers to that endpoint.  The file descriptor returned by a successful call will be the lowest-numbered file descriptor not currently open for the process.
+socket()  creates  an endpoint for communication and returns a file descriptor that refers to that endpoint. 
+The file descriptor returned by a successful call will be the lowest-numbered file descriptor not currently open for the process.
 
 RETURN VALUE
 On success, a file descriptor for the new socket is returned.
@@ -212,6 +213,10 @@ man send
 
 ssize_t send(int sockfd, const void *buf, size_t len, int flags);
 ```
+It is possible that the data will not be sent all at once,
+you can check for the return value to check for how many bitys was sent.
+[Beej’s Guide to Network Programming](https://beej.us/guide/bgnet/html/#sendall)
+
 RETURN VALUE
 On success, these calls return the number of bytes sent.
 On error, -1 is returned, and errno is set appropriately.

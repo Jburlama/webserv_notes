@@ -3,6 +3,10 @@
 [Links](https://web.notaduo.com/notes/29srs/edit)
 [Ninx](https://nginx.org/en/)
 [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/html/)
+[nginx source code](https://github.com/nginx/nginx)
+[nginx doc](https://docs.nginx.com/nginx/admin-guide/basic-functionality/managing-configuration-files/)
+[nginx beguiner doc](https://nginx.org/en/docs/beginners_guide.html)
+[File handling in C++](https://www.guru99.com/cpp-file-read-write-open.html)
 
 ---
 
@@ -90,6 +94,7 @@ Create a socket, connected to a local IP bind, and wait for a connection
 - accept() -> Blocks and waits for a client to connect, then creates a new socket for that connection.
 - send -> Send message.
 - recv -> Recieve message.
+- fork() -> will be used to send and recieve multiple messages at the same time
 
 > "Why not combine listen() and accept()?"
     Because listen() sets up the queue once, while accept() is called repeatedly.
@@ -161,4 +166,10 @@ If The method is *read only*, most of the time you want to use GET.
 ## CGI
 
 [[CGI]]
+
+---
+
+# Nginx
+
+[Digital Ocean](https://www.digitalocean.com/community/tutorials/understanding-the-nginx-configuration-file-structure-and-configuration-contexts)
 

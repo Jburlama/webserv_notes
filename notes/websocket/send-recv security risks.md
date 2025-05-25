@@ -1,13 +1,15 @@
 > [!CAUTION]
 > DeepSeek generated answer
 
-Improper use of `recv()` and `send()` with fixed-size buffers can introduce **security vulnerabilities**, including **buffer overflows**, which are a classic attack vector in networked applications.
+Improper use of `recv()` and `send()` with fixed-size buffers can introduce **security vulnerabilities**, including **buffer overflows**,
+which are a classic attack vector in networked applications.
 
 ---
 
 ### **Why Buffers in `recv()`/`send()` Are Risky**
 1. **Buffer Overflow in `recv()`**  
-   If the buffer passed to `recv()` is smaller than the incoming data, the excess bytes can overflow into adjacent memory, corrupting data or allowing malicious code execution.  
+   If the buffer passed to `recv()` is smaller than the incoming data, the excess bytes can overflow into adjacent memory, 
+    corrupting data or allowing malicious code execution.  
    Example of a vulnerable `recv()` call:
    ```c
    char buffer[64]; // Fixed-size buffer
@@ -93,7 +95,8 @@ Improper use of `recv()` and `send()` with fixed-size buffers can introduce **se
 ---
 
 ### **Why `send()` Is Less Risky (But Still Requires Care)**
-- `send()` writes data from your buffer to the network. The risk here is **not overflow** but **unintended data leaks** (e.g., sending uninitialized memory).  
+- `send()` writes data from your buffer to the network. 
+    The risk here is **not overflow** but **unintended data leaks** (e.g., sending uninitialized memory).  
 - Always specify the **exact number of bytes to send**, not the buffer size:
   ```c
   char buffer[64] = "Hello";
@@ -124,7 +127,8 @@ Always assume incoming data is malicious until proven otherwise! 🔒
 # 2nd answer
 ---
 
-Using buffers in `recv()` and `send()` can pose a security risk if not handled properly, particularly due to the danger of buffer overflows.** Here's a detailed breakdown of the risks and how to mitigate them:
+Using buffers in `recv()` and `send()` can pose a security risk if not handled properly, particularly due to the danger of buffer overflows.
+Here's a detailed breakdown of the risks and how to mitigate them:
 
 ---
 
