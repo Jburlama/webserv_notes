@@ -19,6 +19,12 @@ git checkout prime
 git branch -d branch_name
 ```
 
+## To check which branch you are on
+
+```bash
+git branch
+```
+
 or for a remote branch:
 ```bash
 git push origin --delete branch_name
