@@ -1,4 +1,7 @@
 [CGI MADE EAZY](https://www.jmarshall.com/easy/cgi/)
+[CS Toronto](https://www.cs.toronto.edu/~penny/teaching/csc309-01f/lectures/40/CGI.pdf)
+[Getting Started with CGI Programs](http://www.mnuwer.dbasedeveloper.co.uk/dlearn/web/session01.htm)
+[How the web works: HTTP and CGI explained](https://www.garshol.priv.no/download/text/http-tut.html)
 
 # What is CGI?
 

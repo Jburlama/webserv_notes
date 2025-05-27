@@ -1,6 +1,7 @@
 [[socket API#select - Allows a program to monitor multiple file descriptors]]
 
 [io_multiplexing](https://nima101.github.io/io_multiplexing)
+[blocking sockets](http://dwise1.net/pgm/sockets/blocking.html)
 
 > [!CAUTION]
 > DeepSeek generated answer
